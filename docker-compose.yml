@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  cloth_web:
+    image: cloth_web:latest
+    container_name: cloth_web
+    restart: unless-stopped
+    ports:
+      - 3300:3000
+
+networks:
+  default:
+    name: master-net
+    external: true
